@@ -40,8 +40,34 @@ public class MenuScript : MonoBehaviour
         while (!operation.isDone)
         {
             float progressValue = Mathf.Clamp01(operation.progress / 0.9f);
+            //Debug.Log("111111111");
+
             gameMenu.transform.GetChild(3).GetChild(0).GetComponent<Image>().fillAmount = progressValue;
+
+            
             yield return null;
         }
+
+
+        //if (operation.isDone)
+        //{
+        //    Debug.Log("ooooooooooo");
+
+        //}
+
+
+
+        // Scene loading is complete. Now find the UIControllerScript and call OnGameStart().
+        //UIControllerScript uiController = FindObjectOfType<UIControllerScript>();
+        //if (uiController == null)
+        //{
+        //    Debug.Log("*******");
+        //}
+        //else
+        //{
+        //    uiController.OnGameStart();
+        //}
+
+        //Debug.Log("Here********");
     }
 }
